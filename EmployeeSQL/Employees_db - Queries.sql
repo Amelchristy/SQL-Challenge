@@ -15,8 +15,7 @@ FROM employees
 WHERE hire_date BETWEEN '1986-01-01' AND '1986-12-31';
 
 --3
-SELECT departments.dept_no, departments.dept_name, dept_manager.emp_no, employees.last_name, employees.first_name, dept_manager.from_date, dept_manager.to_date
-FROM departments
+SELECT departments.dept_no, departments.dept_name, dept_manager.emp_no, employees.last_name, employees.first_name
 JOIN dept_manager
 ON departments.dept_no = dept_manager.dept_no
 JOIN employees
